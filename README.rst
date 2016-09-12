@@ -1,4 +1,5 @@
-dju-privateurl
+django-privateurl
 ==============
 
 Django Utils: Private URL
+

@@ -115,7 +115,7 @@ class TestPrivateUrl(TestCase):
         a = PrivateUrl.create('a' * 32)
         try:
             a.get_absolute_url()
-        except NoReverseMatch, e:
+        except NoReverseMatch as e:
             raise self.failureException('Private url reverse url error ({}).'.format(e))
 
     def test_generate_token(self):
