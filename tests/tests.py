@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django.http import HttpResponse
 from django.shortcuts import resolve_url
 from django.test import TestCase
+from django.utils.encoding import force_str
 from privateurl.models import PrivateUrl
 from privateurl.signals import privateurl_ok, privateurl_fail
 
@@ -18,7 +19,7 @@ class TestPrivateUrl(TestCase):
         try:
             PrivateUrl.TOKEN_MIN_SIZE = 1
             with self.assertRaises(RuntimeError):
-                for i in xrange(100):
+                for i in range(100):
                     PrivateUrl.create('test', token_size=1)
         finally:
             PrivateUrl.TOKEN_MIN_SIZE = token_min_size_bak
@@ -43,7 +44,7 @@ class TestPrivateUrl(TestCase):
     def test_token_size(self):
         t = PrivateUrl.create('test', token_size=50, dashed_piece_size=0)
         self.assertEqual(len(t.token), 50)
-        for i in xrange(100):
+        for i in range(100):
             t = PrivateUrl.create('test', token_size=(36, 64), dashed_piece_size=0)
             self.assertTrue(36 <= len(t.token) <= 65)
         self.assertRaises(AttributeError, PrivateUrl.create, 'test', token_size=0)
@@ -148,10 +149,10 @@ class TestPrivateUrlView(TestCase):
         t = PrivateUrl.create('test')
         response = self.client.get(t.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.content, 'ok')
+        self.assertEqual(force_str(response.content), 'ok')
         response = self.client.get(t.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.content, 'fail')
+        self.assertEqual(force_str(response.content), 'fail')
         t.action = 'none'
         response = self.client.get(t.get_absolute_url())
         self.assertEqual(response.status_code, 404)
