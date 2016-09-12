@@ -26,15 +26,15 @@ Installation
   $ easy_install django-privateurl
   
  For install development version use ``git+https://github.com/liminspace/django-privateurl.git@develop`` instead ``django-privateurl``.
- 
+
 **\2\. Set up** ``settings.py`` **in your django project.** ::
 
   INSTALLED_APPS = (
     ...,
     'privateurl',
   )
-  
-**\3\. Run migrate::
+
+**\3\. Run migrate**::
 
   $ manage.py migrate
 
