@@ -4,7 +4,8 @@
 django-privateurl
 ==============
 
-This application helps You easy and flexibility implement different features that need use private url for users like registration confirmation, password recovery, access to paid content etc.
+This application helps You easy and flexibility implement different features that need use private url
+for users like registration confirmation, password recovery, access to paid content etc.
 
 |
 
@@ -25,7 +26,8 @@ Installation
 
   $ easy_install django-privateurl
   
- For install development version use ``git+https://github.com/liminspace/django-privateurl.git@develop`` instead ``django-privateurl``.
+ For install development version use ``git+https://github.com/liminspace/django-privateurl.git@develop``
+ instead ``django-privateurl``.
 
 **\2\. Set up** ``settings.py`` **in your django project.** ::
 
