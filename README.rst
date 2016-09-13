@@ -8,6 +8,15 @@ django-privateurl
 This application helps You easy and flexibility implement different features that need use private url
 for users like registration confirmation, password recovery, access to paid content and so on.
 
+Low level API provides You full control and allow:
+
+* limiting private url by time and hits
+* auto removing urls that won't be used
+* knowing number of hits, date of first and last hit for each url
+* controlling token generator
+* saving additional data in JSON format and using it at url hits
+* processing succeeded or failed hits using django signals and controlling server responses
+
 ============
 Installation
 ============
