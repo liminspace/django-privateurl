@@ -87,7 +87,7 @@ For example::
       ),
   )
 
-For catch private url request you have to create receiver of signals::
+For catch private url request you have to create receiver for ``privateurl_ok`` signal::
 
   from django.dispatch import receiver
   from dju_privateurl.signals import privateurl_ok, privateurl_fail
@@ -99,7 +99,7 @@ For catch private url request you have to create receiver of signals::
       if obj.user:
           obj.user.registration_confirm(request=request)
 
-if you want process invalid process url, you can create receiver for ``privateurl_fail`` signal::
+if you want process invalid private url, you can create receiver for ``privateurl_fail`` signal::
 
   from django.dispatch import receiver
   from dju_privateurl.signals import privateurl_fail
@@ -156,4 +156,4 @@ Settings
 
 ``PRIVATEURL_DEFAULT_TOKEN_SIZE`` -- default size of token that will be generated using ``create`` or ``generate_token`` methods. By default it is ``(8, 64)``.
 
-``PRIVATEURL_DEFAULT_TOKEN_DASHED_PIECE_SIZE`` -- default number of size of pieces that joined by dash that using in ``create`` or ``generate_token`` methods. By default is is ``12``.
+``PRIVATEURL_DEFAULT_TOKEN_DASHED_PIECE_SIZE`` -- default number of size of pieces that joined by dash that using in ``create`` or ``generate_token`` methods. By default it is ``12``.
