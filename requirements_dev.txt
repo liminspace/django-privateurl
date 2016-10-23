@@ -5,7 +5,7 @@ twine
 
 coverage==4.2
 Django>=1.8,<1.11
-pytz==2016.6.1
+pytz==2016.7
 
 # for Py2
 # pip install -U ndg-httpsclient
