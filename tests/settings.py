@@ -1,9 +1,11 @@
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 SECRET_KEY = 'test'
 
 DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 1
 
