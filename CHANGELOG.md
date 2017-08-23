@@ -3,6 +3,7 @@
   * Add support Django 1.11
   * Add support Python 3.6
 
+
 0.0.1 (2016-10-23)
 ==================
   * First release
