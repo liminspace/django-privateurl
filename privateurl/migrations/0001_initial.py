@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
             name='PrivateUrl',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('action', models.SlugField(max_length=40, validators=[django.core.validators.RegexValidator(b'^[-_a-zA-Z0-9]+$')], verbose_name='action')),
-                ('token', models.SlugField(max_length=64, validators=[django.core.validators.RegexValidator(b'^[-a-zA-Z0-9]+$')], verbose_name='token')),
+                ('action', models.SlugField(max_length=40, validators=[django.core.validators.RegexValidator('^[-_a-zA-Z0-9]+$')], verbose_name='action')),
+                ('token', models.SlugField(max_length=64, validators=[django.core.validators.RegexValidator('^[-a-zA-Z0-9]+$')], verbose_name='token')),
                 ('expire', models.DateTimeField(blank=True, db_index=True, null=True, verbose_name='expire')),
                 ('data', models.TextField(blank=True, verbose_name='data')),
                 ('created', models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='created')),
