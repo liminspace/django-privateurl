@@ -1,6 +1,9 @@
 import datetime
 from django.contrib.auth import get_user_model
-from django.core.urlresolvers import reverse, NoReverseMatch
+try:
+    from django.urls import reverse, NoReverseMatch
+except ImportError:
+    from django.core.urlresolvers import reverse, NoReverseMatch
 from django.dispatch import receiver
 from django.http import HttpResponse
 from django.shortcuts import resolve_url

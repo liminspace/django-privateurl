@@ -1,6 +1,5 @@
 import os
-from distutils.core import setup
-from setuptools import find_packages
+from setuptools import setup, find_packages
 import privateurl
 
 
@@ -17,12 +16,14 @@ setup(
     include_package_data=True,
     zip_safe=False,  # because include static
     install_requires=[
-        'django>=1.8,<1.12',
+        'django>=1.8,<2.1',
     ],
     keywords=[
         'django', 'url', 'private', 'private url', 'django-privateurl',
     ],
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
@@ -32,6 +33,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
         'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Software Development :: Libraries :: Python Modules',
         'Framework :: Django',
         'License :: OSI Approved :: MIT License',
     ],
