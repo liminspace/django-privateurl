@@ -2,7 +2,7 @@ import json
 import random
 import datetime
 from django.conf import settings
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.core.validators import RegexValidator
 from django.db import models, IntegrityError
 from django.db import transaction
