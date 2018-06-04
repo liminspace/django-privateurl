@@ -20,7 +20,7 @@ class PrivateUrlManager(models.Manager):
         try:
             return self.select_related('user').get(action=action, token=token)
         except self.model.DoesNotExist:
-            return None
+            pass
 
 
 class PrivateUrl(models.Model):
@@ -54,9 +54,8 @@ class PrivateUrl(models.Model):
         verbose_name_plural = _('private urls')
 
     def get_data(self):
-        if self.data == '':
-            return None
-        return json.loads(self.data)
+        if self.data != '':
+            return json.loads(self.data)
 
     def set_data(self, data):
         if data is None:
