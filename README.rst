@@ -1,9 +1,13 @@
-*****************
+#################
 django-privateurl
-*****************
+#################
+.. image:: https://travis-ci.org/liminspace/django-privateurl.svg?branch=master
+ :target: https://travis-ci.org/liminspace/django-privateurl
+ :alt: build
 
-.. figure:: https://travis-ci.org/liminspace/django-privateurl.svg?branch=develop
-  :target: https://travis-ci.org/liminspace/django-privateurl
+.. image:: https://img.shields.io/pypi/v/django-privateurl.svg
+ :target: https://pypi.org/project/django-privateurl/
+ :alt: pypi
 
 This application helps You easy and flexibly implement different features that need use private url
 for users like registration confirmation, password recovery, access to paid content and so on.

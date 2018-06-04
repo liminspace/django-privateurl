@@ -2,7 +2,10 @@ import json
 import random
 import datetime
 from django.conf import settings
-from django.core.urlresolvers import reverse
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 from django.core.validators import RegexValidator
 from django.db import models, IntegrityError
 from django.db import transaction
@@ -17,14 +20,15 @@ class PrivateUrlManager(models.Manager):
         try:
             return self.select_related('user').get(action=action, token=token)
         except self.model.DoesNotExist:
-            return None
+            pass
 
 
 class PrivateUrl(models.Model):
     TOKEN_MIN_SIZE = 8
     TOKEN_MAX_SIZE = 64
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_('user'), null=True, blank=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_('user'), null=True, blank=True,
+                             on_delete=models.CASCADE)
     action = models.SlugField(verbose_name=_('action'), max_length=40, db_index=True,
                               validators=[RegexValidator(r'^[-_a-zA-Z0-9]+$')])
     token = models.SlugField(verbose_name=_('token'), max_length=TOKEN_MAX_SIZE,
@@ -50,9 +54,8 @@ class PrivateUrl(models.Model):
         verbose_name_plural = _('private urls')
 
     def get_data(self):
-        if self.data == '':
-            return None
-        return json.loads(self.data)
+        if self.data != '':
+            return json.loads(self.data)
 
     def set_data(self, data):
         if data is None:
