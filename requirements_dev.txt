@@ -3,7 +3,7 @@ setuptools==39.2.0
 wheel==0.31.1
 twine==1.11.0
 
-coverage==4.3.4
+coverage==4.5.1
 Django>=1.8,<2.1
 pytz
 
