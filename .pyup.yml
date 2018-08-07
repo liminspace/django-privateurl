@@ -1,0 +1,8 @@
+branch: develop
+schedule: "every week on wednesday"
+search: False
+
+requirements:
+  - requirements_dev.txt:
+      update: all
+      pin: True
