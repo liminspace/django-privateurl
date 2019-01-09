@@ -1,6 +1,6 @@
 pip==18.1
 setuptools==40.6.3
-wheel==0.31.1
+wheel==0.32.3
 twine==1.11.0
 
 coverage==4.5.1
