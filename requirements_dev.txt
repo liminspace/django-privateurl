@@ -3,7 +3,7 @@ setuptools==40.8.0
 wheel==0.32.3
 twine==1.12.1
 
-coverage==4.5.1
+coverage==4.5.2
 Django==2.1
 pytz==2018.5
 
