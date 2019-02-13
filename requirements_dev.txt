@@ -1,6 +1,6 @@
 pip==19.0.2
 setuptools==40.8.0
-wheel==0.31.1
+wheel==0.33.0
 twine==1.11.0
 
 coverage==4.5.1
