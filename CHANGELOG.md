@@ -1,3 +1,8 @@
+1.2.0 (2018-08-07)
+==================
+  * Added supporting Django v2.2
+
+
 1.1.1 (2018-08-07)
 ==================
   * Added supporting Django v2.1
