@@ -2,7 +2,7 @@ wheel==0.33.6
 twine==1.13.0
 
 coverage==4.5.4
-Django==2.2
+Django==2.2.4
 pytz==2018.9
 
 # for Py2
