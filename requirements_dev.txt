@@ -1,5 +1,5 @@
 wheel==0.33.6
-twine==1.13.0
+twine==2.0.0
 
 coverage==4.5.3
 Django==2.2
