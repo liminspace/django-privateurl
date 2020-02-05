@@ -1,7 +1,7 @@
 wheel==0.34.2
 twine==3.1.1
 
-coverage==4.5.3
+coverage==5.0.3
 Django==2.2
 pytz==2018.9
 
