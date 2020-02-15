@@ -8,6 +8,8 @@ python:
   - "2.7"
   - "3.5"
   - "3.6"
+  - "3.7"
+  - "3.8"
 
 env:
   - DJANGO_VERSION="<1.9"
@@ -17,12 +19,31 @@ env:
   - DJANGO_VERSION="<2.1"
   - DJANGO_VERSION="<2.2"
   - DJANGO_VERSION="<2.3"
+  - DJANGO_VERSION="<3.1"
 
 matrix:
   exclude:
     - { python: "2.7", env: DJANGO_VERSION="<2.1" }
     - { python: "2.7", env: DJANGO_VERSION="<2.2" }
     - { python: "2.7", env: DJANGO_VERSION="<2.3" }
+    - { python: "2.7", env: DJANGO_VERSION="<3.1" }
+
+    - { python: "3.5", env: DJANGO_VERSION="<3.1" }
+
+    - { python: "3.6", env: DJANGO_VERSION="<1.9" }
+    - { python: "3.6", env: DJANGO_VERSION="<1.10" }
+    - { python: "3.6", env: DJANGO_VERSION="<1.11" }
+
+    - { python: "3.7", env: DJANGO_VERSION="<1.9" }
+    - { python: "3.7", env: DJANGO_VERSION="<1.10" }
+    - { python: "3.7", env: DJANGO_VERSION="<1.11" }
+
+    - { python: "3.8", env: DJANGO_VERSION="<1.9" }
+    - { python: "3.8", env: DJANGO_VERSION="<1.10" }
+    - { python: "3.8", env: DJANGO_VERSION="<1.11" }
+    - { python: "3.8", env: DJANGO_VERSION="<1.12" }
+    - { python: "3.8", env: DJANGO_VERSION="<2.1" }
+    - { python: "3.8", env: DJANGO_VERSION="<2.2" }
 
 install:
   - pip install "Django$DJANGO_VERSION"

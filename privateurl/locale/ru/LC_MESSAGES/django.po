@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-02 16:58+0300\n"
+"POT-Creation-Date: 2020-02-15 23:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,62 +39,62 @@ msgstr "доступный"
 msgid "Django Private URL"
 msgstr "Django Личные Ссылки"
 
-#: privateurl/models.py:27
+#: privateurl/models.py:30
 msgid "user"
 msgstr "пользователь"
 
-#: privateurl/models.py:28
+#: privateurl/models.py:32
 msgid "action"
 msgstr "действие"
 
-#: privateurl/models.py:30
+#: privateurl/models.py:34
 msgid "token"
 msgstr "токен"
 
-#: privateurl/models.py:32
+#: privateurl/models.py:36
 msgid "expire"
 msgstr "истекает"
 
-#: privateurl/models.py:33
+#: privateurl/models.py:37
 msgid "data"
 msgstr "данные"
 
-#: privateurl/models.py:34
+#: privateurl/models.py:38
 msgid "created"
 msgstr "создано"
 
-#: privateurl/models.py:35
+#: privateurl/models.py:39
 msgid "hits limit"
 msgstr "ограничение хитов"
 
-#: privateurl/models.py:36
+#: privateurl/models.py:40
 msgid "Set 0 to unlimited."
 msgstr "Установите 0 для снятия ограничения."
 
-#: privateurl/models.py:37
+#: privateurl/models.py:41
 msgid "hit counter"
 msgstr "счетчик хитов"
 
-#: privateurl/models.py:38
+#: privateurl/models.py:42
 msgid "first hit"
 msgstr "первый хит"
 
-#: privateurl/models.py:39
+#: privateurl/models.py:43
 msgid "last hit"
 msgstr "последний хит"
 
-#: privateurl/models.py:40
+#: privateurl/models.py:44
 msgid "auto delete"
 msgstr "автоматическое удаление"
 
-#: privateurl/models.py:41
+#: privateurl/models.py:45
 msgid "Delete object if it can no longer be used."
 msgstr "Удалить объект, если он больше не может быть использован."
 
-#: privateurl/models.py:49
+#: privateurl/models.py:53
 msgid "private url"
 msgstr "личная ссылка"
 
-#: privateurl/models.py:50
+#: privateurl/models.py:54
 msgid "private urls"
 msgstr "личные ссылки"

@@ -1,3 +1,8 @@
+1.3.0 (2020-02-15)
+==================
+  * Added supporting Django v3.0
+
+
 1.2.0 (2019-04-06)
 ==================
   * Added supporting Django v2.2
