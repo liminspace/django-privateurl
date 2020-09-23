@@ -1,6 +1,6 @@
 import os
-import django
 
+import django
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -40,7 +40,7 @@ else:
         'django.middleware.common.CommonMiddleware',
         'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',  # noqa
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     )

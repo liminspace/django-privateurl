@@ -1,4 +1,5 @@
 from django.http.response import Http404, HttpResponseRedirect
+
 from .models import PrivateUrl
 from .signals import privateurl_ok, privateurl_fail
 

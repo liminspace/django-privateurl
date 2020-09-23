@@ -1,18 +1,18 @@
 # coding=utf-8
 from __future__ import absolute_import
-import os
-import sys
-import subprocess
-import shutil
-from django.core.management.base import OutputWrapper
-from django.core.management.commands.makemessages import check_programs, Command as DjangoMakemessagesCommand
-from django.core.management.commands.compilemessages import Command as DjangoCompilemessagesCommand
-from django.core.management.utils import handle_extensions
 
+import os
+import shutil
+import subprocess
+import sys
+
+from django.core.management.base import OutputWrapper
+from django.core.management.commands.compilemessages import Command as DjangoCompilemessagesCommand
+from django.core.management.commands.makemessages import check_programs, Command as DjangoMakemessagesCommand
+from django.core.management.utils import handle_extensions
 
 APPS = ('privateurl',)
 LANGUAGES = ('en', 'uk', 'ru')
-
 
 COMMANDS_LIST = ('makemessages', 'compilemessages', 'testmanage', 'test', 'release')
 COMMANDS_INFO = {
@@ -22,7 +22,6 @@ COMMANDS_INFO = {
     'test': 'run tests (eq. "testmanage test")',
     'release': 'make distributive and upload to pypi (setup.py bdist_wheel upload)'
 }
-
 
 GETTEXT_EXTENSIONS = {
     'django': ['html', 'txt', 'py'],
@@ -77,7 +76,7 @@ class CompilemessagesCommand(DjangoCompilemessagesCommand):
                 co.compile_messages(locations)
 
 
-def makemessages(*args):
+def makemessages(*args):  # noqa: F841
     from django.conf import settings
     settings.configure()
     settings.MEDIA_ROOT = settings.STATIC_ROOT = '/-nopath-'
@@ -98,7 +97,7 @@ def makemessages(*args):
                     co.remove_potfiles()
 
 
-def compilemessages(*args):
+def compilemessages(*args):  # noqa: F841
     CompilemessagesCommand.compilemessages()
 
 
@@ -114,7 +113,7 @@ def test(*args):
     testmanage('test', *args)
 
 
-def release(*args):
+def release(*args):  # noqa: F841
     root_dir = os.path.dirname(os.path.abspath(__file__))
     shutil.rmtree(os.path.join(root_dir, 'build'), ignore_errors=True)
     shutil.rmtree(os.path.join(root_dir, 'dist'), ignore_errors=True)

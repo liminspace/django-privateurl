@@ -1,8 +1,8 @@
 #################
 django-privateurl
 #################
-.. image:: https://travis-ci.org/liminspace/django-privateurl.svg?branch=master
- :target: https://travis-ci.org/liminspace/django-privateurl
+.. image:: https://travis-ci.com/liminspace/django-privateurl.svg?branch=master
+ :target: https://travis-ci.com/liminspace/django-privateurl
  :alt: build
 
 .. image:: https://img.shields.io/pypi/v/django-privateurl.svg

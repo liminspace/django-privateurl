@@ -1,9 +1,11 @@
 import datetime
+
 from django.contrib.auth import get_user_model
+
 try:
     from django.urls import reverse, NoReverseMatch
 except ImportError:
-    from django.core.urlresolvers import reverse, NoReverseMatch
+    from django.core.urlresolvers import reverse, NoReverseMatch  # noqa
 from django.dispatch import receiver
 from django.http import HttpResponse
 from django.shortcuts import resolve_url
@@ -133,12 +135,12 @@ class TestPrivateUrlView(TestCase):
         super(TestPrivateUrlView, cls).setUpClass()
 
         @receiver(privateurl_ok, weak=False, dispatch_uid='ok')
-        def ok(action, **kwargs):
+        def ok(action, **kwargs):  # noqa: F841
             if action == 'test':
                 return {'response': HttpResponse('ok')}
 
         @receiver(privateurl_fail, weak=False, dispatch_uid='fail')
-        def fail(action, **kwargs):
+        def fail(action, **kwargs):  # noqa: F841
             if action == 'test':
                 return {'response': HttpResponse('fail')}
 
