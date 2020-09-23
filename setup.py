@@ -1,7 +1,8 @@
 import os
-from setuptools import setup, find_packages
-import privateurl
 
+from setuptools import setup, find_packages
+
+import privateurl
 
 setup(
     name='django-privateurl',
@@ -16,7 +17,7 @@ setup(
     include_package_data=True,
     zip_safe=False,  # because include static
     install_requires=[
-        'django>=1.8,<3.1',
+        'django>=1.8,<3.2',
     ],
     keywords=[
         'django', 'url', 'private', 'private url', 'django-privateurl',

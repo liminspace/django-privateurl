@@ -1,11 +1,13 @@
+import datetime
 import json
 import random
-import datetime
+
 from django.conf import settings
+
 try:
     from django.urls import reverse
 except ImportError:
-    from django.core.urlresolvers import reverse
+    from django.core.urlresolvers import reverse  # noqa
 from django.core.validators import RegexValidator
 from django.db import models, IntegrityError
 from django.db import transaction
