@@ -17,7 +17,7 @@ setup(
     include_package_data=True,
     zip_safe=False,  # because include static
     install_requires=[
-        'django>=1.8,<3.2',
+        'django>=1.8,<3.3',
     ],
     keywords=[
         'django', 'url', 'private', 'private url', 'django-privateurl',
