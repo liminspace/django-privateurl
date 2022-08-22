@@ -2,7 +2,7 @@ language: python
 
 cache: pip
 
-dist: bionic
+dist: jammy
 
 python:
   - "2.7"
@@ -21,6 +21,7 @@ env:
   - DJANGO_VERSION="<2.3"
   - DJANGO_VERSION="<3.1"
   - DJANGO_VERSION="<3.2"
+  - DJANGO_VERSION="<3.3"
 
 matrix:
   exclude:
@@ -29,9 +30,11 @@ matrix:
     - { python: "2.7", env: DJANGO_VERSION="<2.3" }
     - { python: "2.7", env: DJANGO_VERSION="<3.1" }
     - { python: "2.7", env: DJANGO_VERSION="<3.2" }
+    - { python: "2.7", env: DJANGO_VERSION="<3.3" }
 
     - { python: "3.5", env: DJANGO_VERSION="<3.1" }
     - { python: "3.5", env: DJANGO_VERSION="<3.2" }
+    - { python: "3.5", env: DJANGO_VERSION="<3.3" }
 
     - { python: "3.6", env: DJANGO_VERSION="<1.9" }
     - { python: "3.6", env: DJANGO_VERSION="<1.10" }

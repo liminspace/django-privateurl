@@ -1,3 +1,8 @@
+1.5.0 (2022-08-15)
+==================
+  * Added supporting Django v3.2
+
+
 1.4.0 (2020-09-23)
 ==================
   * Added supporting Django v3.1
