@@ -6,7 +6,7 @@ django==5.0; python_version < "3"
 django==5.0; python_version >= "3"
 flake8==6.1.0
 pylint==3.0.3; python_version < "3"
-pylint==2.6.0; python_version >= "3"
+pylint==3.0.3; python_version >= "3"
 six==1.15.0; python_version < "3"
 ndg-httpsclient>=0.5.1; python_version < "3"
 mock<3.1; python_version < "3"
